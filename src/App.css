@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+body 
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgpsgD5Kg6QBJOar2PFKqioTv50DL6lL5pkQ&usqp=CAU);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+.container2
+{
+	position: relative;
+  margin-top: 50px;
+	height: 0px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.cloud 
+{
+	position: absolute;
+  top: 100px;
+	width: 370px;
+	height: 100px;
+	border-radius: 120px;
+	filter: drop-shadow(10px 10px 0 #0005);
+	animation: animateCloud 2s steps(1) infinite;
+}
+@keyframes animateCloud 
+{
+	0%,94%,100%
+	{
+		filter: drop-shadow(10px 10px 0 #0005) drop-shadow(0 0 0 #fff0) brightness(1);
+	}
+	95% 
+	{
+		filter: drop-shadow(10px 10px 0 #0001) drop-shadow(0 0 70px #fff5) brightness(10);
+	}
+}
+.cloud::before
+{
+	content: '';
+	position: absolute;
+	top: -50px;
+	left: 40px;
+	width: 110px;
+	height: 110px;
+	border-radius: 50%;
+	background: #484f59;
+	box-shadow: 90px -10px 0 30px #484f59;
+}
+.cloud::after
+{
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: #484f59;
+	border-radius: 120px;
+	z-index: 10000;
+}
+.weather-card{
+  background-color: rgba(228, 225, 225, 0.7);
+  padding: 50px;
+  box-shadow: 10px 5px 5px #000;
+  border-radius: 20px;
+  max-width: 700px;
+  width:100%;
+  height: 250px;
+}
+.main-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-transform: uppercase;
+}
+.menu-container{
+  display: flex;
+  justify-content: center;
+  background-color: rgba(228, 225, 225, 0.7);
+  box-shadow: 10px 5px 5px #000;
+  border-radius: 60px;
+  max-width: 700px;
+  width:100%;
+  padding: 25px;
+  margin-top: 30px;
+}
+.menu-container Button{
+  margin-right:30px;
+  text-transform: uppercase;
+  color:#000;
+}
+.menu-container Button:hover{
+  background-color: #0f0f0f;
+  transition: 0.8s;
+}
